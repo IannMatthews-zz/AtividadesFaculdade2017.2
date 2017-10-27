@@ -16,7 +16,7 @@ public class AplicacaoQuadrado {
 		System.out.println("Área: " + quad.area());
 		System.out.println("Perímetro: " + quad.perimetro());
 		System.out.println("Lado: " + quad.getLado());
-		
+		ler.close();
 	}
 
 }
