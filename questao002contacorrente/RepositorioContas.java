@@ -3,9 +3,10 @@ package questao002contacorrente;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RepositorioContas {
-	List<ContaCorrente> contas = new ArrayList<ContaCorrente>();
+public class RepositorioContas implements IRepositorio{
+	private List<ContaCorrente> contas = new ArrayList<ContaCorrente>();
 
+	@Override
 	public void adicionarConta(ContaCorrente c1) {
 		if (c1 != null && this.BuscaContaNumero(c1.getNumeroConta()) == null) {
 			contas.add(c1);
@@ -14,6 +15,7 @@ public class RepositorioContas {
 		}
 	}
 
+	@Override
 	public void removerConta(int numeroConta) {
 		boolean achou = false;
 
@@ -29,6 +31,7 @@ public class RepositorioContas {
 		}
 	}
 
+	@Override
 	public ContaCorrente BuscaContaNumero(int numeroConta) {
 		for (ContaCorrente c1 : contas) {
 			if (c1.getNumeroConta() == numeroConta) {
@@ -39,6 +42,7 @@ public class RepositorioContas {
 		return null;
 	}
 
+	@Override
 	public boolean existe(ContaCorrente c1) {
 		if (c1 == null) {
 			return false;
