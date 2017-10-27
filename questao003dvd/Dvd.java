@@ -1,20 +1,12 @@
 package questao003dvd;
 
 public class Dvd {
-	public final boolean LIGADO = true;
-	public final boolean DESLIGADO = false;
-	public final String PARADO = "";
-	public final String REPRODUZINDO = "REPRODUZINDO O DVD...";
-	public final String EM_PAUSA = "REPRODUÇÃO DO DVD EM PAUSA...";
-	public final String VOLTANDO = "VOLTANDO O DVD...";
-	public final String AVANCANDO = "AVANÇANDO O DVD...";
-
 	private boolean estado;
 	private String operacaoEmExecucao;
 
 	public Dvd() {
-		estado = DESLIGADO;
-		operacaoEmExecucao = PARADO;
+		estado = Constantes.DESLIGADO;
+		operacaoEmExecucao = Constantes.PARADO;
 	}
 
 	// GETTERS
@@ -28,23 +20,23 @@ public class Dvd {
 	
 	public void liga()
 	{
-		this.estado = LIGADO;
-		this.operacaoEmExecucao = PARADO;
+		this.estado = Constantes.LIGADO;
+		this.operacaoEmExecucao = Constantes.PARADO;
 		this.estadoDvd();
 	}
 	
 	public void desliga()
 	{
-		this.estado = DESLIGADO;
-		this.operacaoEmExecucao = PARADO;
+		this.estado = Constantes.DESLIGADO;
+		this.operacaoEmExecucao = Constantes.PARADO;
 		this.estadoDvd();
 	}
 	
 	public void play()
 	{
-		if(this.getEstado() == LIGADO)
+		if(this.getEstado() == Constantes.LIGADO)
 		{
-			this.operacaoEmExecucao = REPRODUZINDO;
+			this.operacaoEmExecucao = Constantes.REPRODUZINDO;
 			this.estadoDvd();
 		}
 		else
@@ -55,9 +47,9 @@ public class Dvd {
 	
 	public void stop()
 	{
-		if(this.getEstado() == LIGADO)
+		if(this.getEstado() == Constantes.LIGADO)
 		{
-			this.operacaoEmExecucao = PARADO;
+			this.operacaoEmExecucao = Constantes.PARADO;
 			this.estadoDvd();
 		}
 		else
@@ -68,9 +60,9 @@ public class Dvd {
 	
 	public void pause()
 	{
-		if(this.getEstado() == LIGADO)
+		if(this.getEstado() == Constantes.LIGADO)
 		{
-			this.operacaoEmExecucao = EM_PAUSA;
+			this.operacaoEmExecucao = Constantes.EM_PAUSA;
 			this.estadoDvd();
 		}
 		else
@@ -81,9 +73,9 @@ public class Dvd {
 	
 	public void volta()
 	{
-		if(this.getEstado() == LIGADO)
+		if(this.getEstado() == Constantes.LIGADO)
 		{
-			this.operacaoEmExecucao = VOLTANDO;
+			this.operacaoEmExecucao = Constantes.VOLTANDO;
 			this.estadoDvd();
 		}
 		else
@@ -94,9 +86,9 @@ public class Dvd {
 	
 	public void avanca()
 	{
-		if(this.getEstado() == LIGADO)
+		if(this.getEstado() == Constantes.LIGADO)
 		{
-			this.operacaoEmExecucao = AVANCANDO;
+			this.operacaoEmExecucao = Constantes.AVANCANDO;
 			this.estadoDvd();
 		}
 		else
