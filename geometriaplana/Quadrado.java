@@ -1,6 +1,6 @@
 package geometriaplana;
 
-public class Quadrado {
+public class Quadrado implements IFormaGeometrica {
 	private double lado;
 
 	public Quadrado() {
@@ -18,10 +18,12 @@ public class Quadrado {
 		this.lado = lado;
 	}
 
+	@Override
 	public double area() {
 		return lado * lado;
 	}
 
+	@Override
 	public double perimetro() {
 		return lado * 4;
 	}
